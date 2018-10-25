@@ -1,15 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".ChipActivity">
 
     <com.google.android.material.chip.Chip
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="渣渣辉"/>
+        android:text="默认样式"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!--
+        使用 style="@style/Widget.MaterialComponents.Chip.Filter"
+初始状态下， 不展示前后图标
+点击之后会展示前面的选中图标，并且具有选中状态
+通常应用在 ChipGroup 中
+    -->
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="FilterChip01"/>
+
+    <!--
+        使用style="@style/Widget.MaterialComponents.Chip.Entry"
+默认在末尾展示删除按钮；点击后前面展示选中图标，有选中状态
+通常可以作为 chipDrawable 使用，比如在填选邮件收件人时可以使用
+    -->
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="EntryChip "/>
+
+    <!--
+    默认不展示前后的图标，但点击后有选中状态
+    通常用在 ChipGroup 中 , 通过 ChipGroup 的 singleSelection=true/false 属性可以实现单选或多选
+    -->
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="ChoiceChip"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F00"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:chipSpacing="20dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ChoiceChip"/>
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ChoiceChip"/>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ChoiceChip"/>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ChoiceChip"/>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ChoiceChipChoiceChipChoiceChipChoiceChip"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>

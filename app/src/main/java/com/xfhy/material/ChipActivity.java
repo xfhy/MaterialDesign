@@ -8,6 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
  * 2018年10月23日08:39:12
  * 先简单展示几个demo
  *
+ * 必须将主题设置成
+ * Theme.MaterialComponents
+ * Theme.MaterialComponents.NoActionBar
+ * Theme.MaterialComponents.Light
+ * Theme.MaterialComponents.Light.NoActionBar
+ * Theme.MaterialComponents.Light.DarkActionBar
+ *
  * - style="@style/Widget.MaterialComponents.Chip.Entry"：
  * 注意： Chip通常与独立的ChipDrawable一起使用。
  *
