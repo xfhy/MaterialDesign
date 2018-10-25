@@ -26,6 +26,8 @@
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling">
+        </activity>
+        <activity android:name=".MaterialButtonActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
